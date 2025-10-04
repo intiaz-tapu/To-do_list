@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+
+        <!-- Theme Colors -->
+        <div class="themes">
+            <span class="theme" style="background: #6a5af9;"></span>
+            <span class="theme" style="background: #f67e5a;"></span>
+            <span class="theme" style="background: #00b894;"></span>
+            <span class="theme" style="background: #8e44ad;"></span>
+            <span class="theme" style="background: #f39c12;"></span>
+        </div>
+
+        <!-- Input -->
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="Add a new task...">
+            <button id="addBtn">+ Add</button>
+        </div>
+
+        <!-- Date & Time -->
+        <div class="datetime">
+            <input type="date" id="taskDate">
+            <input type="time" id="taskTime">
+        </div>
+
+        <!-- Task Stats -->
+        <div class="stats">
+            <span id="totalTasks">0 tasks</span>
+            <span id="completedTasks">0 completed</span>
+        </div>
+
+        <!-- Filter -->
+        <div class="filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+
+        <!-- Tasks List -->
+        <ul id="taskList"></ul>
+
+        <!-- Priority -->
+        <div class="priority">
+            <span>Priority</span>
+            <button class="priority-btn selected" data-priority="red" style="background:red;"></button>
+            <button class="priority-btn" data-priority="yellow" style="background:yellow;"></button>
+            <button class="priority-btn" data-priority="green" style="background:green;"></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

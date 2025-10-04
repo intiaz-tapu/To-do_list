@@ -1,0 +1,244 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #d1dccd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+     background: #fff;
+    padding: 30px 40px;
+    border-radius: 20px;
+    width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #6a5af9;
+     margin-bottom: 25px;
+    font-size: 2.5rem; 
+}
+
+.themes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.theme {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.input-section {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 15px;           
+    font-size: 1.1rem;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+#addBtn {
+    padding: 15px 20px;
+    border: none;
+    background: #6a5af9;
+    color: #fff;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+#addBtn:hover {
+    background: #5940e0;
+}
+
+.datetime {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.datetime input {
+    padding: 10px 12px;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.filter {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.filter-btn {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.filter-btn.active {
+    background: #6a5af9;
+    color: #fff;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+#taskList li {
+    background: #f0f0f0;
+    margin-bottom: 10px;
+     padding: 15px 12px;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+#taskList li:hover {
+    background: #e0e0e0;
+}
+
+#taskList li.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+#taskList li div small {
+    display: block;
+    font-size: 12px;
+    color: #555;
+}
+
+.priority {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.priority-btn {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.priority-btn.selected {
+    border: 2px solid #000;
+}
+.priority span {
+    font-size: 1.1rem;
+}
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #taskInput {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    #addBtn {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    #taskList li {
+        font-size: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #taskList li div:last-child {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    .datetime {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .filter {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .priority {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
+
+/* Adjust date & time inputs for mobile */
+@media (max-width: 768px) {
+    .datetime input[type="date"],
+    .datetime input[type="time"] {
+        font-size: 0.9rem;     /* smaller text */
+        padding: 6px 8px;      /* reduce padding */
+        height: 38px;          /* control height */
+    }
+}
+
+@media (max-width: 480px) {
+    .datetime {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .datetime input[type="date"],
+    .datetime input[type="time"] {
+        width: 100%;
+        font-size: 0.85rem;
+        padding: 5px 8px;
+        height: 35px;
+    }
+}
