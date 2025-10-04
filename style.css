@@ -69,12 +69,47 @@ h1 {
 #addBtn:hover {
     background: #5940e0;
 }
-
+}
 .datetime {
     display: flex;
-    gap: 10px;
-    margin-bottom: 10px;
+    gap: 15px;
+    margin-bottom: 15px;
 }
+
+.date-field,
+.time-field {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.datetime label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+    .datetime {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .datetime label {
+        font-size: 0.85rem;
+        margin-bottom: 4px;
+    }
+
+    .datetime input {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 6px 8px;
+        height: 38px;
+    }
+}
+
 .datetime input {
     padding: 10px 12px;
     font-size: 1rem;
@@ -202,10 +237,10 @@ h1 {
         font-size: 1.7rem;
     }
 
-    .datetime {
+    /* .datetime {
         flex-direction: column;
         gap: 5px;
-    }
+    } */
 
     .filter {
         flex-wrap: wrap;
@@ -228,7 +263,7 @@ h1 {
     }
 }
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
     .datetime {
         flex-direction: column;
         gap: 6px;
@@ -241,6 +276,7 @@ h1 {
         padding: 5px 8px;
         height: 35px;
     }
-}
+} */
+
 
 
